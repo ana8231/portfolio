@@ -1,0 +1,35 @@
+
+        body { 
+            background-color: black;
+        }
+         a { 
+            color: rgb(160, 160, 160);
+            font-family: Arial;
+            text-decoration: none;
+            font-size: 20px;
+            text-align: center;
+            
+        }
+         h1 { 
+            font-family:Impact;
+            color: rgb(255, 255, 255);
+            font-size: 100px;
+            text-align: center;
+        }
+        #cabecalho ul { 
+            display: flex;
+            justify-content: space-between;
+            list-style-type:none;
+            }
+        #cabecalho { 
+            width: 25%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -3%
+        }
+         #imagens ul { 
+            display: flex;
+            justify-content: space-between; 
+            padding: 0%;
+            margin: 0%;
+        }
