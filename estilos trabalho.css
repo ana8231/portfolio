@@ -1,16 +1,18 @@
-        body { 
+        body {
             background-color: rgb(78, 96, 140);
         }
-         a { 
+
+        a {
             color: rgb(211, 210, 210);
             font-family: Arial;
             text-decoration: none;
             font-size: 20px;
             text-align: center;
-            
+
         }
-          h1 { 
-            font-family:Impact;
+
+        h1 {
+            font-family: Impact;
             color: rgb(255, 255, 255);
             font-size: 100px;
             text-align: center;
@@ -20,24 +22,39 @@
             margin-right: -8px;
             margin-top: -10px;
         }
-        #cabecalho ul { 
+
+        #cabecalho ul {
             display: flex;
             justify-content: space-between;
-            }
-        #cabecalho { 
+        }
+
+        #cabecalho {
             width: 25%;
             margin-left: auto;
             margin-right: auto;
             margin-top: -3%
         }
-         #imagens ul { 
+
+        .linha {
             display: flex;
-            justify-content: space-between; 
-            padding: 0%;
-            text-decoration: none;
-            margin: 0%;
+            flex-wrap: wrap;
+            padding: 6px;
+            justify-content: center;
         }
-        ul { 
+
+        .coluna {
+            flex: 25%;
+            max-width: 25%;
+            padding: 6px;
+        }
+
+        .coluna img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        ul {
             text-decoration: none;
-            list-style-type:none;
+            list-style-type: none;
         }
