@@ -9,3 +9,10 @@
             margin-left: 600px;
             text-align: left;
         }
+        p { 
+            font-family: Helvetica;
+        color: white;
+        font-size: 25px;
+        margin-top: -5%;
+        margin-left: 40%;
+        }
