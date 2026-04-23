@@ -1,18 +1,37 @@
-         body { 
-            background-color: rgb(78, 96, 140);
-        }
-               h1 { 
-            font-family:Impact;
-            color: rgb(255, 255, 255);
-            font-size: 150px;
-            margin-top: -600px;
-            margin-left: 600px;
-            text-align: left;
-        }
-        p { 
-            font-family: Helvetica;
-        color: white;
-        font-size: 25px;
-        margin-top: -5%;
-        margin-left: 40%;
-        }
+         body {
+             background-color: rgb(0, 12, 43);
+         }
+
+         h1 {
+             font-family: Impact;
+             color: rgb(255, 255, 255);
+             font-size: 150px;
+             margin-top: -600px;
+             margin-left: 600px;
+             text-align: left;
+         }
+
+         ul {
+             text-align: left;
+             margin-top: -120px;
+             margin-left: 595px;
+             font-family: Arial;
+             font-size: 20px;
+             padding: 10px;
+         }
+
+         p {
+             font-family: Arial;
+             color: white;
+             font-size: 20px;
+             margin-top: 2%;
+             margin-left: 40%;
+         }
+
+        a {
+             list-style-type: none;
+             text-decoration: none;
+             color:rgb(223, 223, 223);
+         }
+
+    

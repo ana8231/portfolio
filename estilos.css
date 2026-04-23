@@ -23,12 +23,11 @@
             color: rgb(0, 0, 0);
         }
         ul { 
-            list-style-type:none;
-            padding:0px;
             text-align: left;
-            margin-top: -120px;
-            margin-left:590px;
+             margin-top: -120px;
+             margin-left: 590px;
+             font-family: Arial;
+             font-size: 20px;
+             padding: 10px;
             }
-         #conteudo { 
-          display: inline-block;
-        }
+  
