@@ -1,181 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
-
 <head>
-  <title>Trabalhos</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="estilos trabalho.css">
-  <script>
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
-    }
-
-
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      captionText.innerHTML = dots[slideIndex - 1].alt;
-    }
-  </script>
-
+    <meta charset="UTF-8">
+    <title>Trabalhos</title>
+    <link rel="stylesheet" href="estilos trabalho.css">
 </head>
-
 <body>
-  <h1>Trabalhos</h1>
-  <ul>
-    <li><a href="euuu.html"><strong>Sobre mim</strong></a></li>
-    <li><a href="cv.html"><strong>CV</strong></a></li>
-    <li><a href="index.html"><strong>Voltar ao portfólio</strong></a></li>
-  </ul>
+    <main class="trabalhos-page">
+        <h1><strong>Trabalhos</strong></h1>
+        <div class="nav-row">
+            <a href="euuu.html">Sobre mim</a>
+            <span class="nav-line"></span>
+            <a href="index.html">Voltar</a>
+        </div>
 
-  <br>
-  <div class="butoes">
-    <div class="linha">
-      <div class="coluna">
-        <img src="Tipografia_AnaMonteiro.jpg" onclick="openModal();currentSlide(1)">
-        <img src="abeia.jpg" onclick="openModal();currentSlide(3)">
-        <img src="Ilustração 1.jpg" onclick="openModal();currentSlide(5)">
-        <img src="sinaletica.jpg" onclick="openModal();currentSlide(7)">
-        <img src="EG_PROJ1_Ana Monteiro – Prancha1.jpg" onclick="openModal();currentSlide(9)">
-      </div>
-      <div class="coluna">
-        <img src="Astros.jpg" onclick="openModal();currentSlide(2)">
-        <img src="2.jpg" onclick="openModal();currentSlide(4)">
-        <img src="EG_EPR2_AnaMonteiro.jpg" onclick="openModal();currentSlide(6)">
-        <img src="4.jpg" onclick="openModal();currentSlide(8)">
+        <div class="gallery-grid">
+            <div class="gallery-item" data-index="0">
+                <img src="Tipografia_AnaMonteiro.jpg" alt="Tipografia">
+            </div>
+            <div class="gallery-item" data-index="1">
+                <img src="gonomio.png" alt="Gonomio">
+            </div>
+            <div class="gallery-item" data-index="2">
+                <img src="Astros.jpg" alt="Astros">
+            </div>
+            <div class="gallery-item" data-index="3">
+                <img src="abeia.jpg" alt="Abeia">
+            </div>
+            <div class="gallery-item" data-index="4">
+                <img src="Ilustração 1.jpg" alt="Ilustração">
+            </div>
+            <div class="gallery-item" data-index="5">
+                <img src="4.jpg" alt="Projeto 4">
+            </div>
+            <div class="gallery-item" data-index="6">
+                <img src="sinaletica.jpg" alt="Sinalética">
+            </div>
+            <div class="gallery-item" data-index="7">
+                <img src="EG_EPR2_AnaMonteiro.jpg" alt="EG EPR2">
+            </div>
+            <div class="gallery-item" data-index="8">
+                <img src="catrinas.png" alt="Catrinas">
+            </div>
+            <div class="gallery-item" data-index="9">
+                <img src="EG_PROJ1_Ana Monteiro – Prancha1.jpg" alt="Projeto 1">
+            </div>
+        </div>
+    </main>
 
-      </div>
+    <div id="imageModal" class="modal-overlay">
+        <div class="modal-content-wrapper">
+            <button class="modal-prev" id="prevBtn">&#10094;</button>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="" />
+            </div>
+            <button class="modal-next" id="nextBtn">&#10095;</button>
+        </div>
+        <div class="modal-caption" id="modalCaption"></div>
     </div>
-  </div>
-  <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
 
-      <div class="mySlides">
-        <div class="tabela">
-          <img src="Tipografia_AnaMonteiro.jpg" width="80%" >
-          <div class="detalhes">
-        <div class="numbertext">1 / 9</div>
-        <p id="caption">Para este trabalho fiz vários teste com tinta de cores difernetes e explorei materiais sobre uma folha de papel, então digitalizei e inseri tipografia na composição. </p>
-        </div>
-        </div>
-        
-      </div>
+    <script>
+        const captions = {
+            0: "Após explorar diferentes materiais e cores no papel, fotografei e digitalizei a composição no Photoshop. A profundidade e a cor vermelha lembraram-me uma Explosão, então deformei e brinquei com sobreposições para inserir a palavra na composição.",
+            1: "Criação de um curta animado no Cavalry utilizando materiais físicos que pintei e recortei para digitalizar e poder animar. O curta consta de um pequeno gnomo que, após ver que ainda está muito distante do seu objetivo final, procura algo que o ajude na sua mochila, após descartar muitos veículos, retira um energetico e continua o seu caminho.",
+            2: "Após explorar diferentes materiais e cores no papel, fotografei e digitalizei a composição no Photoshop. Após brincar com sobreposições e filtros, obtive esse fundo preto e as circunferências espalhadas que lembraram-me um tipo de galáxia ou universo, então decidi inserir a palavra 'Astros' na composição.",
+            3: "Após explorar diferentes materiais e cores no papel, fotografei e digitalizei a composição no Photoshop. Após brincar com sobreposições e filtros, obtive esses círculos pretos e amarelos que lembraram-me abelhas, então inseri a onomatopeia 'Bzzz' na composição. ",
+            4: "Ilustração cirada com inspiração na história do videoclipe 'Nap of a Star' do grupo TXT. Em que desenhei o personagem principal na escuridão da floresta com a sua tocha e a estrela que aparece durante o videoclipe. Procurei um estilo de desenho robusto e texturizado.",
+            5: "Pequena imagem livre em que explorei camadas e sobreposições no Photoshop utilizando imagens, recortes e texturas retiradas do Pinterest.",
+            6: "Criação de uma sinalética para uma casa de banho fictícia. Procurei criar um símbolo cartoonizado e que remetessem à colagem.",
+            7: "Em um exercício proposto por um professor, risquei uma folha de papel com uma caneta enquanto ouvia e sentia uma música, após a experiência sensorial, fotografei e digitalizei a composição no Photoshop, o contraste entre a harmonia do branco e o barulho e ruído dos rabiscos a preto, fizeram-me desejar criar uma metáfora sobre abrir os olhos e poder ver além da nossa bolha, então inseri a frase 'Open Your Eyes' com uma tipografia chamativa, como um chamado de atenção.",
+            8: "Criação de um cartaz para um Desfile de Catrinas fictício a realizar no Porto, utilizei a porta da Alfandega do Porto como elemento principal do cartaz e transformei-a num portal entre o mundo dos vivos e dos mortos e entre Portugal e México, então inseri elementos que lembrem a cultura mexicana a sair desse portal.",
+            9: "Criação de uma pauta musical artística baseada na música 'Hello Rocks' do videójogo 'HoA'. Transmiti a sua melodia relaxante e instrumentos serenos com tinta acrilica sobre o papel."
+        };
 
-      <div class="mySlides">
-        <div class="tabela">
-          <img src="Astros.jpg">
-          <div class="detalhes">
-          <div class="numbertext">2 / 9</div>
-           <p id="caption">Para este trabalho fiz vários teste com tinta de cores difernetes e explorei materiais sobre uma folha de papel, então digitalizei e inseri tipografia na composição.</p>
-        </div>
-        </div>
-      </div>
+        const images = [
+            "Tipografia_AnaMonteiro.jpg",
+            "gonomio.png",
+            "Astros.jpg",
+            "abeia.jpg",
+            "Ilustração 1.jpg",
+            "4.jpg",
+            "sinaletica.jpg",
+            "EG_EPR2_AnaMonteiro.jpg",
+            "catrinas.png",
+            "EG_PROJ1_Ana Monteiro – Prancha1.jpg"
+        ];
 
-      <div class="mySlides">
-        <div class="tabela">
-          <img src="abeia.jpg">
-          <div class="detalhes">
-        <div class="numbertext">3 / 9</div>
-         <p id="caption">Para este trabalho fiz vários teste com tinta de cores difernetes e explorei materiais sobre uma folha de papel, então digitalizei e inseri tipografia na composição.</p>
-        </div>
-        </div>
-      </div>
+        let currentIndex = 0;
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const modalCaption = document.getElementById("modalCaption");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const galleryItems = document.querySelectorAll(".gallery-item");
 
-      <div class="mySlides">
-        <div class="tabela">
-          <img src="2.jpg">
-          <div class="detalhes">
-        <div class="numbertext">4 / 9</div>
-        <p id="caption">Neste trabalho, foi proposto criar uma ilustração baseada em alguma mídia como livros, filmes, músicas, etc. Eu fiz esta ilustração inspirada no videoclipe "Nap of a Star" do grupo sul coreano TXT.</p>
-      </div>
-        </div>
-        </div>
-        
-      <div class="mySlides">
-        <div class="tabela">
-          
-          <img src="Ilustração 1.jpg">
-          <div class="detalhes">
-        <div class="numbertext">5 / 9</div>
-        <p id="caption">Neste trabalho, foi proposto criar uma ilustração baseada em alguma mídia como livros, filmes, músicas, etc. Eu fiz esta ilustração inspirada no videoclipe "Nap of a Star" do grupo sul coreano TXT.</p>
-        </div>
-        </div>
-        
-      </div>
-      <div class="mySlides">
-        <div class="tabela">
-          <img src="EG_EPR2_AnaMonteiro.jpg">
-          <div class="detalhes">
-        <div class="numbertext">6 / 9</div>
-        <p id="caption">Para este trabalho fiz vários teste com tinta de cores difernetes e explorei materiais sobre uma folha de papel, então digitalizei e inseri tipografia na composição.</p>
-        </div>
-        </div>
-      </div>
-      <div class="mySlides">
-        <div class="tabela">
-          <img src="sinaletica.jpg">
-          <div class="detalhes">
-        <div class="numbertext">7 / 9</div>
-        <p id="caption">Neste projeto foi proposto criar uma sinalética.</p>
-        </div>
-        </div>
-      </div>
-      <div class="mySlides">
-        <div class="tabela">
-          <img src="4.jpg">
-          <div class="detalhes">
-        <div class="numbertext">8 / 9</div>
-        <p id="caption">Este trabalho foi um pequeno projeto livre em que apenas explorei camadas e sobreposições no Photoshop.</p>
-        </div>
-        </div>
-      </div>
-      <div class="mySlides">
-        <div class="tabela">
-          <img src="EG_PROJ1_Ana Monteiro – Prancha1.jpg">
-        <div class="detalhes">
-          <div class="numbertext">9 / 9</div>
-        <p id="caption">Para este trabalho foi proposto criar uma pauta musical artistíca, para este projeto utilizei a música "Hello Rocks" do vídeojogo "HoA".</p>
-        </div>
-        </div>
-      </div>
+        galleryItems.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                currentIndex = parseInt(item.dataset.index);
+                openModal();
+            });
+        });
 
+        function openModal() {
+            modal.style.display = "flex";
+            updateModal();
+        }
 
-    </div>
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        function closeModal() {
+            modal.style.display = "none";
+        }
 
+        function updateModal() {
+            modalImage.src = images[currentIndex];
+            modalCaption.textContent = captions[currentIndex];
+        }
 
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateModal();
+        }
 
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateModal();
+        }
+
+        prevBtn.addEventListener("click", prevImage);
+        nextBtn.addEventListener("click", nextImage);
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener("keydown", (e) => {
+            if (modal.style.display === "flex") {
+                if (e.key === "ArrowLeft") prevImage();
+                if (e.key === "ArrowRight") nextImage();
+                if (e.key === "Escape") closeModal();
+            }
+        });
+    </script>
 </body>
-
+</html>
 </html>
